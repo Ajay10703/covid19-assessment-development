@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Symptom Assessment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="assets/js/jquery-script.js"></script>
+  </head>
+
+  <body style="background-image: url(./assets/images/motherdaughter.jpg)">
+    <!-- <header class="flex-container container-md">
+      <div class="logo flex-start">
+        <img src="assets/images/Anthem-BCBS-Logo_8_27_21.svg" alt="logo" />
+      </div>
+      <br />
+    </header> -->
+    <h1 class="heading py-4">COVID Assessment</h1>
+    <div id="svg_wrap"></div>
+    <div>
+      <section>
+        <div class="box">
+          <p>Let's start with your age and gender.</p>
+          <div class="row form-group">
+            <select class="form-control col-sm m-2">
+              <option>Select Your Age</option>
+              <option>18-24</option>
+              <option>25-34</option>
+              <option>35-44</option>
+              <option>45-55</option>
+              <option>55+</option>
+            </select>
+
+            <select class="form-control col-sm m-2">
+              <option>Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="options">
+          <div class="button px-sm-5 gonext">SKIP</div>
+          <div class="button px-sm-5 gonext">NEXT</div>
+        </div>
+
+        <a href="index.html" class="text-black">&larr; Back</a>
+      </section>
+
+      <section>
+        <div class="box">
+          <p>
+            Do you feel feverish or have a fever (greater than 100.4°F / 38°C)?
+          </p>
+        </div>
+        <div class="options">
+          <div class="button px-sm-5 gonext">YES</div>
+          <div class="button px-sm-5 gonext">NO</div>
+        </div>
+
+        <div class="goprev">&larr; Previous</div>
+      </section>
+
+      <section>
+        <div class="box">
+          <p>Do you have a cough?</p>
+        </div>
+        <div class="options">
+          <div class="button px-sm-5 gonext">YES</div>
+          <div class="button px-sm-5 gonext">NO</div>
+        </div>
+
+        <div class="goprev">&larr; Previous</div>
+      </section>
+
+      <section>
+        <div class="box">
+          <p>
+            Do you feel short of breath or are you having trouble breathing?
+          </p>
+        </div>
+        <div class="options">
+          <div class="button px-sm-5 gonext">YES</div>
+          <div class="button px-sm-5 gonext">NO</div>
+        </div>
+
+        <div class="goprev">&larr; Previous</div>
+      </section>
+
+      <section>
+        <div class="box">
+          <p>
+            Have you been in contact with someone who has tested positive for
+            Coronavirus, has COVID-19 or is being evaluated for Coronavirus
+            (person under investigation)?
+          </p>
+        </div>
+        <div class="options">
+          <div class="button px-sm-5 gonext">YES</div>
+          <div class="button px-sm-5 gonext">NO</div>
+        </div>
+
+        <div class="goprev">&larr; Previous</div>
+      </section>
+
+      <section>
+        <div class="box">
+          <p>
+            Are you from or have you been in areas with a Coronavirus outbreak
+            (a lot of cases) in the past 14 days? And/or have you traveled
+            internationally in the past 14 days?
+          </p>
+        </div>
+        <div class="options">
+          <div class="button px-sm-5 gonext">YES</div>
+          <div class="button px-sm-5 gonext">NO</div>
+        </div>
+
+        <div class="goprev">&larr; Previous</div>
+      </section>
+
+      <section>
+        <p class="txt-lg">Enter your details</p>
+        <input type="text" class="m-2 form-control" placeholder="Name" />
+        <input type="email" class="m-2 form-control" placeholder="Email" />
+        <input type="tel" class="m-2 form-control" placeholder="Phone" />
+        <div class="options final-btn">
+          <div id="final_submit" class="button px-sm-5 gonext">SUBMIT</div>
+        </div>
+
+        <div class="goprev">&larr; Previous</div>
+      </section>
+    </div>
+    <div style="display: none">
+      <div class="button" id="prev">&larr; Previous</div>
+      <div class="button" id="next">Next &rarr;</div>
+      <div class="button" id="submit">Agree and send application</div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        All rights reserved &copy; healthcarepartnersofsouthcarolina.com 2023
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".gonext").click(function () {
+        $("#next").trigger("click");
+      });
+      $(".goprev").click(function () {
+        $("#prev").trigger("click");
+      });
+      $("#final_submit").click(function () {
+        window.location.href = "assessment-result.html";
+      });
+    });
+  </script>
+</html>
